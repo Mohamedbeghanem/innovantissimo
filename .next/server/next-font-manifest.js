@@ -1,0 +1,1 @@
+self.__NEXT_FONT_MANIFEST="{\"pages\":{},\"app\":{\"/home/mohamedbeghanem/Documents/innovantissimo/app/layout\":[\"static/media/e807dee2426166ad-s.p.woff2\",\"static/media/c9e6921c7fc300d8-s.p.woff2\"]},\"appUsingSizeAdjust\":true,\"pagesUsingSizeAdjust\":false}"
