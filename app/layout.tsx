@@ -21,22 +21,13 @@ export const metadata: Metadata = {
   generator: "v0.app",
 }
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
-  params,
 }: {
   children: React.ReactNode
-  params?: Promise<{ locale?: string }>
 }) {
-  let locale = 'en'
-  
-  if (params) {
-    const resolvedParams = await params
-    locale = resolvedParams?.locale || 'en'
-  }
-
   return (
-    <html lang={locale} className={`${workSans.variable} ${openSans.variable}`}>
+    <html lang="en" className={`${workSans.variable} ${openSans.variable}`}>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta httpEquiv="X-UA-Compatible" content="IE=edge" />

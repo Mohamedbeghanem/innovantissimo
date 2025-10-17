@@ -56,7 +56,7 @@ export function TeamSection() {
               <CardHeader className="text-center pb-4">
                 <div className="w-32 h-32 mx-auto mb-4 rounded-xl overflow-hidden bg-muted">
                   <img
-                    src={member.image || "/logo.svg"}
+                    src={member.image || "/Innovantissimo-02.svg"}
                     alt={member.name}
                     className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-300"
                   />

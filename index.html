@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ORH: The Future of Medical X-ray</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- Chosen Palette: Warm Neutrals & Teal -->
+    <!-- Application Structure Plan: A single-page, narrative scrolling structure was chosen to guide the user (investors/partners) through a compelling pitch. The flow is logical: Problem -> Solution -> Market Opportunity -> Technology -> Use Cases -> CTA. This is more persuasive than a simple dashboard or a direct copy of the report structure. Key interactions include clickable tabs for competitive advantages and interactive charts for market data, designed to engage the user and make the data digestible without overwhelming them. -->
+    <!-- Visualization & Content Choices: 
+    - Report Info: Competitive Advantages (Table) -> Goal: Organize/Compare -> Viz: Interactive HTML/CSS Tabs -> Interaction: Click to show details -> Justification: More engaging and space-efficient than a static table. Method: Vanilla JS + CSS classes.
+    - Report Info: Market Size (Radiology Images in France) -> Goal: Compare -> Viz: Horizontal Bar Chart -> Interaction: Hover tooltips -> Justification: Clearly shows the relative scale of the market in different regions. Library: Chart.js (Canvas).
+    - Report Info: Sales Projections -> Goal: Show Change -> Viz: Bar Chart -> Interaction: Hover tooltips -> Justification: Visualizes growth potential over time, a key metric for investors. Library: Chart.js (Canvas).
+    - Report Info: Core Technologies -> Goal: Organize -> Viz: HTML/CSS Diagram -> Interaction: Subtle hover effects -> Justification: Visually represents the interdisciplinary foundation of the project simply and effectively. Method: HTML/CSS Grid.
+    - CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FDFDFB;
+            color: #333;
+        }
+        .chart-container {
+            position: relative;
+            width: 100%;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            height: 300px;
+            max-height: 500px;
+        }
+        @media (min-width: 768px) {
+            .chart-container {
+                height: 450px;
+            }
+        }
+        .advantage-tab.active {
+            background-color: #0d9488;
+            color: #ffffff;
+            border-color: #0d9488;
+        }
+        .advantage-content {
+            display: none;
+        }
+        .advantage-content.active {
+            display: block;
+        }
+        .tech-item {
+            transition: transform 0.2s ease-in-out;
+        }
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="bg-white/80 backdrop-blur-md sticky top-0 z-50 shadow-sm">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <h1 class="text-2xl font-bold text-teal-700">ORH</h1>
+            <div>
+                <a href="#contact" class="bg-teal-600 text-white font-medium py-2 px-4 rounded-lg hover:bg-teal-700 transition-colors">Contact Us</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="hero" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center">
+                <h2 class="text-4xl md:text-6xl font-bold text-gray-800 leading-tight mb-4">The Future of Medical X-ray is Here.</h2>
+                <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">ORH delivers wireless, distance, and immediate diagnostic imaging, overcoming the critical barriers of mobility, safety, and access in modern healthcare.</p>
+            </div>
+        </section>
+
+        <section id="problem" class="py-16 bg-teal-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">The Challenge with Traditional X-ray</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Today's standard technology presents significant, unnecessary barriers to efficient and effective patient care.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="text-4xl mb-4 text-teal-600">&#128694;</div>
+                        <h4 class="text-xl font-semibold mb-2">Immobility</h4>
+                        <p class="text-gray-600">Bulky, static devices make imaging for home-hospitalized patients or those with reduced mobility a complex and often compromising challenge.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="text-4xl mb-4 text-teal-600">&#9888;&#65039;</div>
+                        <h4 class="text-xl font-semibold mb-2">Complexity & Risk</h4>
+                        <p class="text-gray-600">Complex setups, power dependencies, and cumbersome operator protection slow down procedures and increase logistical overhead.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm text-center">
+                        <div class="text-4xl mb-4 text-teal-600">&#128337;</div>
+                        <h4 class="text-xl font-semibold mb-2">Inefficiency</h4>
+                        <p class="text-gray-600">The entire traditional process is labor-intensive and time-consuming, causing delays in critical diagnostic processing and patient throughput.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="solution" class="py-20">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Introducing ORH: Diagnostic Power, Unchained</h3>
+                    <p class="text-gray-600 mt-2 max-w-3xl mx-auto">ORH is a revolutionary medical device built on robotics, AI, and mechatronics to solve these problems, fundamentally redefining the X-ray radiological industry.</p>
+                </div>
+
+                <div class="max-w-4xl mx-auto">
+                    <div class="flex flex-wrap justify-center border-b border-gray-200 mb-8 -mx-2">
+                        <button class="advantage-tab active py-2 px-4 mx-2 mb-2 font-medium text-gray-600 border-b-2 border-transparent hover:border-teal-600 hover:text-teal-600 transition-colors" data-target="advantage-1">Distance Imaging</button>
+                        <button class="advantage-tab py-2 px-4 mx-2 mb-2 font-medium text-gray-600 border-b-2 border-transparent hover:border-teal-600 hover:text-teal-600 transition-colors" data-target="advantage-2">Wireless Mobility</button>
+                        <button class="advantage-tab py-2 px-4 mx-2 mb-2 font-medium text-gray-600 border-b-2 border-transparent hover:border-teal-600 hover:text-teal-600 transition-colors" data-target="advantage-3">Enhanced Safety</button>
+                        <button class="advantage-tab py-2 px-4 mx-2 mb-2 font-medium text-gray-600 border-b-2 border-transparent hover:border-teal-600 hover:text-teal-600 transition-colors" data-target="advantage-4">Market Position</button>
+                    </div>
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <div id="advantage-1" class="advantage-content active">
+                            <h4 class="text-2xl font-semibold text-teal-700 mb-3">Distance Imaging</h4>
+                            <p class="text-lg text-gray-700"><strong class="font-semibold text-gray-800">The ORH Difference:</strong> It is possible to get a clear, diagnostic-quality X-ray image from a distance.</p>
+                            <p class="text-lg text-gray-700 mt-2"><strong class="font-semibold text-gray-800">Impact &amp; Benefit:</strong> This enables non-intrusive diagnosis for home-hospitalized people and those with reduced mobility, dramatically improving patient comfort and care quality.</p>
+                        </div>
+                        <div id="advantage-2" class="advantage-content">
+                             <h4 class="text-2xl font-semibold text-teal-700 mb-3">Complete Wireless Mobility</h4>
+                             <p class="text-lg text-gray-700"><strong class="font-semibold text-gray-800">The ORH Difference:</strong> The device does not require plugging into any source of electrical power and is effortless to transport.</p>
+                             <p class="text-lg text-gray-700 mt-2"><strong class="font-semibold text-gray-800">Impact &amp; Benefit:</strong> This facilitates a seamless transition to mobile healthcare, simplifies in-office procedures, and allows imaging anywhere it's needed.</p>
+                        </div>
+                        <div id="advantage-3" class="advantage-content">
+                             <h4 class="text-2xl font-semibold text-teal-700 mb-3">Enhanced Safety</h4>
+                             <p class="text-lg text-gray-700"><strong class="font-semibold text-gray-800">The ORH Difference:</strong> It ensures operator safety without the need for cumbersome, sealed protection.</p>
+                             <p class="text-lg text-gray-700 mt-2"><strong class="font-semibold text-gray-800">Impact &amp; Benefit:</strong> This streamlines operations, improves operator comfort, reduces setup time, and ensures a faster overall operation processing.</p>
+                        </div>
+                        <div id="advantage-4" class="advantage-content">
+                             <h4 class="text-2xl font-semibold text-teal-700 mb-3">Unique Market Position</h4>
+                             <p class="text-lg text-gray-700"><strong class="font-semibold text-gray-800">The ORH Difference:</strong> Currently, there is no similar product on the international dental market.</p>
+                             <p class="text-lg text-gray-700 mt-2"><strong class="font-semibold text-gray-800">Impact &amp; Benefit:</strong> This positions ORH as a first-mover and the definitive market leader in a new category of mobile diagnostics, offering a significant competitive advantage.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="market" class="py-16 bg-teal-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">A Clear Market Opportunity</h3>
+                    <p class="text-gray-600 mt-2 max-w-3xl mx-auto">The existing radiology market is vast, and ORH is perfectly positioned for rapid adoption and significant growth, particularly within the underserved mobile and dental sectors.</p>
+                </div>
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-4 text-center">Radiology Images in France (2016)</h4>
+                         <div class="chart-container">
+                            <canvas id="radiologyImagesChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="bg-white p-6 rounded-lg shadow-sm">
+                        <h4 class="text-xl font-semibold mb-4 text-center">Projected French Market Sales (Units)</h4>
+                        <div class="chart-container">
+                            <canvas id="salesProjectionChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="technology" class="py-20">
+            <div class="container mx-auto px-6">
+                 <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Built on a Foundation of Innovation</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">Our integrated, cross-functional expertise ensures ORH is not just an incremental update, but a robust, next-generation diagnostic tool.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 max-w-5xl mx-auto text-center">
+                    <div class="tech-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">🤖</div>
+                        <h4 class="font-semibold">Robotics</h4>
+                    </div>
+                    <div class="tech-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">🧠</div>
+                        <h4 class="font-semibold">AI</h4>
+                    </div>
+                     <div class="tech-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">⚙️</div>
+                        <h4 class="font-semibold">Mechatronics</h4>
+                    </div>
+                    <div class="tech-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">🌿</div>
+                        <h4 class="font-semibold">Biomaterial</h4>
+                    </div>
+                    <div class="tech-item bg-white p-6 rounded-lg shadow-sm">
+                        <div class="text-3xl mb-3">💻</div>
+                        <h4 class="font-semibold">IT Science</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="impact" class="py-16 bg-teal-50/50">
+            <div class="container mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h3 class="text-3xl font-bold text-gray-800">Targeted Impact</h3>
+                    <p class="text-gray-600 mt-2 max-w-2xl mx-auto">ORH is designed to become the new standard in facilities that demand speed, precision, and flexibility.</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="text-4xl text-teal-600 mb-2">&#127973;</div>
+                        <h4 class="text-xl font-semibold">Dental Clinics &amp; Offices</h4>
+                        <p class="text-gray-600">Accelerate patient throughput for Stomatologists, Dental Surgeons, and Implantologists.</p>
+                    </div>
+                     <div class="text-center">
+                        <div class="text-4xl text-teal-600 mb-2">&#127974;</div>
+                        <h4 class="text-xl font-semibold">Hospitals &amp; Emergency</h4>
+                        <p class="text-gray-600">Offer immediate, high-quality imaging at the point of care, without complex room prep.</p>
+                    </div>
+                     <div class="text-center">
+                        <div class="text-4xl text-teal-600 mb-2">&#127758;</div>
+                        <h4 class="text-xl font-semibold">Global Market</h4>
+                        <p class="text-gray-600">Aggressively targeting the promising international market to establish early global adoption.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer id="contact" class="bg-gray-800 text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <h3 class="text-3xl font-bold">Don't just keep up with the X-ray industry—lead it.</h3>
+            <p class="text-gray-300 mt-4 max-w-2xl mx-auto">ORH is ready for global deployment. We are seeking partners who share our vision for mobile, safe, and efficient medical imaging.</p>
+            <div class="mt-8 space-x-4">
+                <a href="mailto:contact@orh-medical.com" class="bg-teal-600 text-white font-medium py-3 px-6 rounded-lg hover:bg-teal-700 transition-colors">Contact Us</a>
+                <a href="#" class="bg-gray-700 text-white font-medium py-3 px-6 rounded-lg hover:bg-gray-600 transition-colors">Download Prospectus</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            const advantageTabs = document.querySelectorAll('.advantage-tab');
+            const advantageContents = document.querySelectorAll('.advantage-content');
+
+            advantageTabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    advantageTabs.forEach(item => item.classList.remove('active'));
+                    advantageContents.forEach(item => item.classList.remove('active'));
+                    
+                    tab.classList.add('active');
+                    const targetId = tab.getAttribute('data-target');
+                    document.getElementById(targetId).classList.add('active');
+                });
+            });
+
+            Chart.defaults.font.family = "'Inter', sans-serif";
+            Chart.defaults.color = '#6b7280';
+            Chart.defaults.plugins.tooltip.backgroundColor = '#1f2937';
+            Chart.defaults.plugins.tooltip.titleFont = { size: 14, weight: 'bold' };
+            Chart.defaults.plugins.tooltip.bodyFont = { size: 12 };
+            Chart.defaults.plugins.tooltip.padding = 10;
+            Chart.defaults.plugins.tooltip.cornerRadius = 4;
+            
+            const formatNumber = (num) => {
+                if (num >= 1000000) return (num / 1000000).toFixed(1) + 'M';
+                if (num >= 1000) return (num / 1000).toFixed(1) + 'k';
+                return num;
+            };
+
+            const radiologyData = {
+                labels: [
+                    'Île-de-France', 'Auvergne et Rhône-Alpes', 'Occitanie', 
+                    'Provence-Alpes-Côte d\'Azur', 'Grand-Est', 'Hauts-de-France', 
+                    'Nouvelle Aquitaine', 'Pays-de-la-Loire', 'Bretagne', 'Normandie',
+                    'Bourgogne et Franche-Comté', 'Centre-Val-de-Loire', 'Corse'
+                ],
+                values: [
+                    3211687, 2199149, 1675296, 1636112, 1724846, 1406757, 
+                    1618155, 1151302, 1042373, 786764, 741391, 635781, 85599
+                ]
+            };
+            
+            const salesData = {
+                labels: ['2023', '2024', '2025', '2026'],
+                values: [4500, 7800, 6000, 3800]
+            };
+
+            const ctxRadiology = document.getElementById('radiologyImagesChart');
+            if(ctxRadiology) {
+                new Chart(ctxRadiology, {
+                    type: 'bar',
+                    data: {
+                        labels: radiologyData.labels,
+                        datasets: [{
+                            label: 'Number of Radiology Images',
+                            data: radiologyData.values,
+                            backgroundColor: '#0d9488',
+                            borderColor: '#0f766e',
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        indexAxis: 'y',
+                        responsive: true,
+                        maintainAspectRatio: false,
+                        plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.raw.toLocaleString('fr-FR');
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            x: {
+                                beginAtZero: true,
+                                grid: {
+                                    drawOnChartArea: false,
+                                    color: '#e5e7eb'
+                                },
+                                ticks: {
+                                     callback: function(value, index, values) {
+                                        return formatNumber(value);
+                                    }
+                                }
+                            },
+                            y: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+
+            const ctxSales = document.getElementById('salesProjectionChart');
+            if(ctxSales) {
+                new Chart(ctxSales, {
+                    type: 'bar',
+                    data: {
+                        labels: salesData.labels,
+                        datasets: [{
+                            label: 'Projected Unit Sales',
+                            data: salesData.values,
+                            backgroundColor: '#14b8a6',
+                            borderColor: '#0d9488',
+                            borderWidth: 1,
+                            borderRadius: 4,
+                        }]
+                    },
+                    options: {
+                        responsive: true,
+                        maintainAspectRatio: false,
+                         plugins: {
+                            legend: {
+                                display: false
+                            },
+                            tooltip: {
+                                callbacks: {
+                                    label: function(context) {
+                                        return context.raw.toLocaleString('fr-FR') + ' units';
+                                    }
+                                }
+                            }
+                        },
+                        scales: {
+                            y: {
+                                beginAtZero: true,
+                                grid: {
+                                    color: '#e5e7eb'
+                                }
+                            },
+                            x: {
+                                grid: {
+                                    display: false
+                                }
+                            }
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+</body>
+</html>

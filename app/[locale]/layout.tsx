@@ -1,23 +1,23 @@
-import type React from "react"
-import { setRequestLocale } from 'next-intl/server'
+import React from "react"
 import { ClientProviders } from "@/components/client-providers"
 import { ClientLayout } from "@/components/client-layout"
 
 export default async function LocaleLayout({
   children,
   params,
-}: Readonly<{
+}: {
   children: React.ReactNode
-  params: { locale: string }
-}>) {
-  // Enable static rendering
-  setRequestLocale(params.locale)
+  params: Promise<{ locale: string }>
+}) {
+  const { locale } = await params
 
   return (
-    <ClientProviders>
-      <ClientLayout>
-        {children}
-      </ClientLayout>
-    </ClientProviders>
+    <html lang={locale}>
+      <body>
+        <ClientProviders>
+          <ClientLayout>{children}</ClientLayout>
+        </ClientProviders>
+      </body>
+    </html>
   )
 }

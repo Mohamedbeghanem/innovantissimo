@@ -107,7 +107,7 @@ export function ResponsiveHeroLogos() {
                 className="group absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-white p-2 sm:p-3 md:p-4 rounded-lg sm:rounded-xl shadow-md transition-transform duration-200 hover:scale-105 hover:shadow-lg"
               >
                 <img
-                  src="/logo.svg"
+                  src="/Innovantissimo-02.svg"
                   alt="Implantaly Dental Clinic Logo"
                   className="h-8 sm:h-12 md:h-14 w-14 sm:w-20 md:w-24 opacity-90 group-hover:opacity-100 transition-opacity"
                 />

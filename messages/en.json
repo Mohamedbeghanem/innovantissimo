@@ -11,7 +11,7 @@
     "bookNow": "Book Now"
   },
   "hero": {
-    "title": "Welcome to Implantaly\nDental Clinic By Hs",
+    "title": "Welcome to innovantissimo",
     "subtitle": "We use the highest quality materials on the market in order to provide the best results to our patients. So don’t worry about your smile, trust us to handle it.",
     "cta": "Schedule Your Visit",
     "learnMore": "Learn More About Us",
@@ -35,7 +35,7 @@
     }
   },
   "about": {
-    "title": "About Implantaly Group",
+    "title": "About innovantissimo",
     "subtitle": "Dedicated to providing exceptional dental implant solutions with specialized expertise",
     "description": "Leading dental implant specialists with state-of-the-art technology and compassionate care. Your smile transformation is our expertise.",
     "mission": {
@@ -164,7 +164,7 @@
     "both": "Both"
   },
   "footer": {
-    "copyright": "© 2024 Implantaly Group. All rights reserved.",
+    "copyright": "© 2024 innovantissimo. All rights reserved.",
     "privacy": "Privacy Policy",
     "terms": "Terms of Service",
     "description": "Leading dental implant specialists with state-of-the-art technology and compassionate care. Your smile transformation is our expertise.",
@@ -206,13 +206,13 @@
   },
   "testimonials": {
     "title": "What Our Patients Say",
-    "subtitle": "Don't just take our word for it. Here's what our patients have to say about their experience at Implantaly Group.",
+    "subtitle": "Don't just take our word for it. Here's what our patients have to say about their experience at innovantissimo.",
     "averageRating": "4.9/5 Average Rating",
     "happyPatients": "1000+ Happy Patients",
     "yearsExperience": "20+ Years Experience"
   },
   "whyChooseUs": {
-    "title": "Why Choose Implantaly Group?",
+    "title": "Why Choose innovantissimo?",
     "subtitle": "We combine advanced implant technology, experienced specialists, and compassionate care to deliver exceptional dental implant experiences for you and your family.",
     "advancedTechnology": "Advanced Technology",
     "sameDayAppointments": "Same-Day Appointments",
@@ -226,7 +226,7 @@
     "emergencyCare": "Emergency Care"
   },
   "statistics": {
-    "title": "Implantaly Group by the Numbers",
+    "title": "innovantissimo by the Numbers",
     "subtitle": "Our commitment to excellence is reflected in the numbers that matter most - our patients' satisfaction and our years of dedicated service.",
     "happyPatients": "Happy Patients",
     "yearsExperience": "Years Experience",
