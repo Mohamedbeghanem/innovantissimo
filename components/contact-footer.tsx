@@ -12,7 +12,7 @@ export function ContactFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-3xl font-bold font-grotesk"
+            className="text-2xl sm:text-3xl font-bold font-grotesk"
           >
             Innovantissimo
           </motion.h3>
@@ -21,7 +21,7 @@ export function ContactFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="mt-2"
+            className="mt-2 text-sm sm:text-base"
           >
             Pioneering the Future of Medical Technology.
           </motion.p>
@@ -30,7 +30,7 @@ export function ContactFooter() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.3 }}
-            className="mt-4"
+            className="mt-4 text-sm sm:text-base"
           >
             contact@innovantissimo.com
           </motion.p>

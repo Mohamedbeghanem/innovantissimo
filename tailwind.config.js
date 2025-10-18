@@ -22,6 +22,7 @@ module.exports = {
         'hero-bg': '#000000',
         'footer-bg': '#000000',
         'text-main': '#F2F2F2',
+        'text-dark': '#111827',
         'accent-green': '#009246',
         'accent-white': '#F4F4F4',
         'accent-red': '#CE2B37',
