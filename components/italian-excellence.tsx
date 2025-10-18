@@ -15,7 +15,7 @@ export const ItalianExcellence = () => {
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 md:gap-16 items-center">
         <div className="relative w-full h-80 sm:h-96 rounded-lg overflow-hidden">
           <Image
-            src="/placeholder.svg"
+            src="/ba13240b-c24f-4ace-86ad-1d45ec490b22.jpeg"
             alt="Italian Excellence"
             layout="fill"
             objectFit="cover"

@@ -36,7 +36,7 @@ export const BuiltOnExcellence = () => {
         </div>
         <div className="relative w-full h-80 sm:h-96 rounded-lg overflow-hidden md:order-2">
           <Image
-            src="/placeholder.svg"
+            src="/798f5a8d-de07-49cd-8a6e-340faeca0421.jpeg"
             alt="Built on Excellence"
             layout="fill"
             objectFit="cover"

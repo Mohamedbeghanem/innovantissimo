@@ -15,7 +15,7 @@ export const TheInnovation = () => {
       <div className="container mx-auto px-4 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div className="relative w-full h-64 sm:h-80 rounded-lg overflow-hidden">
           <Image
-            src="/placeholder.svg"
+            src="/7f89bcd7-adac-4310-9962-66baadd240ce.jpeg"
             alt="The Innovation"
             layout="fill"
             objectFit="cover"
