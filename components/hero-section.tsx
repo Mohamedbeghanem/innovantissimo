@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { Button } from "./ui/button";
+import Link from "next/link";
 
 export function HeroSection() {
   return (
@@ -29,12 +30,14 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8"
         >
-          <Button
-            size="lg"
-            className="bg-accent-green text-white hover:bg-opacity-90 transition-colors font-bold py-4 px-8 rounded-full"
-          >
-            Explore Our Technology
-          </Button>
+          <Link href="/docuseal">
+            <Button
+              size="lg"
+              variant="white"
+            >
+              Innovation in Progress
+            </Button>
+          </Link>
         </motion.div>
       </div>
     </section>

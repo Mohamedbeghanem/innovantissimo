@@ -30,7 +30,7 @@ export function ContactFormPopup({ isOpen, onClose }: ContactFormPopupProps) {
     <Dialog open={isOpen} onOpenChange={onClose}>
       <DialogContent className="sm:max-w-[425px] bg-black text-white">
         <DialogHeader>
-          <DialogTitle>Contact Us</DialogTitle>
+          <DialogTitle>Innovation in Progress</DialogTitle>
           <DialogDescription>
             Fill out the form below and we'll get back to you as soon as possible.
           </DialogDescription>
@@ -57,7 +57,7 @@ export function ContactFormPopup({ isOpen, onClose }: ContactFormPopupProps) {
             </div>
           </div>
           <DialogFooter>
-            <Button type="submit">Send Message</Button>
+            <Button type="submit" variant="white">Send Message</Button>
           </DialogFooter>
         </form>
       </DialogContent>

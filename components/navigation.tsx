@@ -1,12 +1,10 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import Image from "next/image"
-import { ContactFormPopup } from "./contact-form-popup"
+import { Button } from "@/components/ui/button"
 
 export function Navigation() {
-  const [isPopupOpen, setIsPopupOpen] = useState(false)
 
   return (
     <nav className="sticky top-0 z-50 bg-black backdrop-blur-xl border-b border-gray-800 shadow-lg">
@@ -27,16 +25,16 @@ export function Navigation() {
 
           {/* CTA */}
           <div className="flex items-center space-x-4">
-            <button
-              onClick={() => setIsPopupOpen(true)}
-              className="px-4 py-2 bg-white text-black rounded-md font-medium"
-            >
-              Contact Us
-            </button>
+            <Link href="/docuseal">
+              <Button
+                variant="white"
+              >
+                Innovation in Progress
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
-      <ContactFormPopup isOpen={isPopupOpen} onClose={() => setIsPopupOpen(false)} />
     </nav>
   )
 }

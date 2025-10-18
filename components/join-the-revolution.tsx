@@ -1,4 +1,6 @@
 import React from 'react';
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export const JoinTheRevolution = () => {
   return (
@@ -8,9 +10,11 @@ export const JoinTheRevolution = () => {
         <p className="text-lg text-text-main mb-8 max-w-2xl mx-auto">
           Become a part of the future of medical imaging. Contact us to learn more about our technology and investment opportunities.
         </p>
-        <button className="bg-accent-green text-white font-bold py-3 px-8 rounded-full hover:bg-opacity-90 transition-colors">
-          Contact Us
-        </button>
+        <Link href="/docuseal">
+          <Button variant="white" size="lg">
+            Innovation in Progress
+          </Button>
+        </Link>
       </div>
     </section>
   );

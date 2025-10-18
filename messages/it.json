@@ -13,7 +13,7 @@
   "hero": {
     "title": "Benvenuti in innovantissimo",
     "subtitle": "Utilizziamo i materiali della massima qualità sul mercato per offrire i migliori risultati ai nostri pazienti. Quindi non preoccuparti del tuo sorriso, affidati a noi.",
-    "cta": "Prenota la Tua Visita",
+    "cta": "Innovazione in Corso",
     "learnMore": "Scopri di Più su di Noi",
     "featureBlocks": {
       "experienceTitle": "20+ Anni di Esperienza",
@@ -78,7 +78,7 @@
       "flexiblePayment": "Opzioni di Pagamento Flessibili"
     },
     "actions": {
-      "scheduleConsultation": "Prenota Consultazione",
+      "scheduleConsultation": "Innovazione in Corso",
       "askQuestions": "Fai Domande"
     }
   },
@@ -93,7 +93,7 @@
       "time": "Orario Preferito",
       "service": "Tipo di Servizio",
       "message": "Note Aggiuntive",
-      "submit": "Prenota Appuntamento",
+      "submit": "Innovazione in Corso",
       "newPatient": "Nuovo Paziente",
       "existingPatient": "Paziente Esistente",
       "insuranceProvider": "Fornitore Assicurativo",
@@ -134,14 +134,14 @@
     }
   },
   "contact": {
-    "title": "Contattaci",
+    "title": "Innovazione in Corso",
     "subtitle": "Mettiti in contatto con il nostro team",
     "form": {
       "name": "Nome",
       "email": "Email",
       "subject": "Oggetto",
       "message": "Messaggio",
-      "send": "Invia Messaggio"
+      "send": "Innovazione in Corso"
     },
     "info": {
       "address": "Indirizzo",
@@ -248,7 +248,7 @@
   "altaAcademy": {
     "title": "Fai Progressi nella Tua Carriera Dentale",
     "subtitle": "Programmi di coaching e educazione dentale professionale progettati per elevare le tue competenze e far progredire la tua carriera in implantologia.",
-    "cta": "Vedi i Corsi",
+    "cta": "Innovazione in Corso",
     "learnMore": "Contatta l'Accademia",
     "features": {
       "expertInstructors": "Istruttori Esperti",
@@ -268,7 +268,7 @@
   "idesign": {
     "title": "Visualizza il Tuo Sorriso Perfetto",
     "subtitle": "Tecnologia di progettazione 3D all'avanguardia per impianti dentali e ripristini. Vedi i tuoi risultati di trattamento prima che accadano.",
-    "cta": "Vedi il Portfolio",
+    "cta": "Innovazione in Corso",
     "learnMore": "Inizia la Progettazione",
     "features": {
       "3dModeling": "Modellazione 3D",

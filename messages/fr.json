@@ -13,7 +13,7 @@
   "hero": {
     "title": "Bienvenue chez innovantissimo",
     "subtitle": "Nous utilisons les matériaux de la plus haute qualité sur le marché afin de fournir les meilleurs résultats à nos patients. Alors ne vous inquiétez pas pour votre sourire, faites-nous confiance pour nous en occuper.",
-    "cta": "Planifier Votre Visite",
+    "cta": "Innovation en Cours",
     "learnMore": "En Savoir Plus Sur Nous",
     "featureBlocks": {
       "experienceTitle": "20+ Ans d'Expérience",
@@ -78,7 +78,7 @@
       "flexiblePayment": "Options de Paiement Flexibles"
     },
     "actions": {
-      "scheduleConsultation": "Planifier une Consultation",
+      "scheduleConsultation": "Innovation en Cours",
       "askQuestions": "Poser des Questions"
     }
   },
@@ -93,7 +93,7 @@
       "time": "Heure Préférée",
       "service": "Type de Service",
       "message": "Notes Supplémentaires",
-      "submit": "Réserver Rendez-vous",
+      "submit": "Innovation en Cours",
       "newPatient": "Nouveau Patient",
       "existingPatient": "Patient Existant",
       "insuranceProvider": "Fournisseur d'Assurance",
@@ -134,14 +134,14 @@
     }
   },
   "contact": {
-    "title": "Contactez-nous",
+    "title": "Innovation en Cours",
     "subtitle": "Entrez en contact avec notre équipe",
     "form": {
       "name": "Nom",
       "email": "Email",
       "subject": "Sujet",
       "message": "Message",
-      "send": "Envoyer le Message"
+      "send": "Innovation en Cours"
     },
     "info": {
       "address": "Adresse",
@@ -248,7 +248,7 @@
   "altaAcademy": {
     "title": "Faites Progresser Votre Carrière Dentaire",
     "subtitle": "Programmes de coaching et d'éducation dentaire professionnels conçus pour élever vos compétences et faire progresser votre carrière en implantologie.",
-    "cta": "Voir les Cours",
+    "cta": "Innovation en Cours",
     "learnMore": "Contacter l'Académie",
     "features": {
       "expertInstructors": "Instructeurs Experts",
@@ -268,7 +268,7 @@
   "idesign": {
     "title": "Visualisez Votre Sourire Parfait",
     "subtitle": "Technologie de conception 3D de pointe pour les implants dentaires et les restaurations. Voyez vos résultats de traitement avant qu'ils ne se produisent.",
-    "cta": "Voir le Portfolio",
+    "cta": "Innovation en Cours",
     "learnMore": "Commencer la Conception",
     "features": {
       "3dModeling": "Modélisation 3D",

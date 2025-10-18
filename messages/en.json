@@ -13,7 +13,7 @@
   "hero": {
     "title": "Welcome to innovantissimo",
     "subtitle": "We use the highest quality materials on the market in order to provide the best results to our patients. So don’t worry about your smile, trust us to handle it.",
-    "cta": "Schedule Your Visit",
+    "cta": "Innovation in Progress",
     "learnMore": "Learn More About Us",
     "featureBlocks": {
       "experienceTitle": "20+ Years Experience",
@@ -78,7 +78,7 @@
       "flexiblePayment": "Flexible Payment Options"
     },
     "actions": {
-      "scheduleConsultation": "Schedule Consultation",
+      "scheduleConsultation": "Innovation in Progress",
       "askQuestions": "Ask Questions"
     }
   },
@@ -93,7 +93,7 @@
       "time": "Preferred Time",
       "service": "Service Type",
       "message": "Additional Notes",
-      "submit": "Book Appointment",
+      "submit": "Innovation in Progress",
       "newPatient": "New Patient",
       "existingPatient": "Existing Patient",
       "insuranceProvider": "Insurance Provider",
@@ -134,14 +134,14 @@
     }
   },
   "contact": {
-    "title": "Contact Us",
+    "title": "Innovation in Progress",
     "subtitle": "Get in touch with our team",
     "form": {
       "name": "Name",
       "email": "Email",
       "subject": "Subject",
       "message": "Message",
-      "send": "Send Message"
+      "send": "Innovation in Progress"
     },
     "info": {
       "address": "Address",
@@ -252,7 +252,7 @@
   "altaAcademy": {
     "title": "Advance Your Dental Career",
     "subtitle": "Professional dental coaching and education programs designed to elevate your skills and advance your career in implant dentistry.",
-    "cta": "View Courses",
+    "cta": "Innovation in Progress",
     "learnMore": "Contact Academy",
     "features": {
       "expertInstructors": "Expert Instructors",
@@ -272,7 +272,7 @@
   "idesign": {
     "title": "Visualize Your Perfect Smile",
     "subtitle": "Cutting-edge 3D design technology for dental implants and restorations. See your treatment results before they happen.",
-    "cta": "View Portfolio",
+    "cta": "Innovation in Progress",
     "learnMore": "Start Design",
     "features": {
       "3dModeling": "3D Modeling",
