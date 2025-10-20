@@ -23,11 +23,11 @@ export function Navigation() {
             </Link>
           </div>
 
-          {/* CTA */}
-          <div className="flex items-center space-x-4">
-            <Link href="/docuseal">
-              <Button
-                variant="white"
+      {/* CTA */}
+      <div className="flex items-center space-x-4">
+        <Link href="https://form.typeform.com/to/OhYhYFH1">
+          <Button
+            variant="white"
               >
                 Innovation in Progress
               </Button>
