@@ -18,7 +18,7 @@ export default function HomePage() {
       <ItalianExcellence />
       <WhyChooseInnovantissimo />
       <ProductFeatures />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <Faq />
       <CallToAction />
       <ContactFooter />

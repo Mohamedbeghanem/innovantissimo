@@ -30,7 +30,7 @@ export function HeroSection() {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="mt-8"
         >
-          <Link href="/docuseal">
+          <Link href="https://form.typeform.com/to/OhYhYFH1">
             <Button
               size="lg"
               variant="white"

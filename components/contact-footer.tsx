@@ -32,7 +32,7 @@ export function ContactFooter() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="mt-4 text-sm sm:text-base"
           >
-            contact@innovantissimo.com
+            +39 344 4972268 | innovantissimo@implantaly.com
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

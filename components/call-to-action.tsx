@@ -18,7 +18,7 @@ export const CallToAction = () => {
         <p className="text-base sm:text-lg max-w-2xl mx-auto mb-8">
           Partner with us to bring the future of medical imaging to your institution.
         </p>
-        <Link href="/contact">
+        <Link href="https://form.typeform.com/to/OhYhYFH1">
           <Button size="lg" variant="white">
             Contact Us
           </Button>
